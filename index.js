@@ -24,7 +24,9 @@ app.set('views', './views');
 // Sample questions data
 let questions = [
     { id: 1, question: 'What continet in Mt. Everest in?', answer: 'Asia' },
-    { id: 2, question: 'What is the term of US President (in years)?', answer: '4' }
+    { id: 2, question: 'What is the term of US President (in years)?', answer: '4' },
+    { id: 4, question: 'What is study of organisms called?', answer: 'Biology' },
+    { id: 3, question: 'What is the name of the galaxy nearest of Milky Way?', answer: 'Andromeda' }
 ];
 
 // Routes
@@ -36,7 +38,7 @@ app.post('/api/submit', (req, res) => {
     const { id, answer } = req.body;
     const question = questions.find(q => q.id === id);
     if (!question) {
-        return res.status(404).send('Question not found');
+        return res.status(404).send('Question not in the Question bank.');
     }
     if (question.answer === answer) {
         res.send('Correct!');
@@ -45,13 +47,19 @@ app.post('/api/submit', (req, res) => {
     }
 });
 
-// User routes
+// User route
 const userRoutes = require('./routes/user');
 app.use('/users', userRoutes);
 
-// Comment routes
+// Comment route
 const commentRoutes = require('./routes/comments');
 app.use('/comments', commentRoutes);
+
+// Add user route
+const addUserRoutes = require('./routes/user');
+app.use('/users', addUserRoutes);
+
+
 
 // Root route handler
 app.get('/', (req, res) => {
