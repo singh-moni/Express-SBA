@@ -1,0 +1,22 @@
+/*
+
+Express Quiz App
+This is a simple quiz application built using Express.js. It allows users to view questions, submit answers, and interact with comments. 
+The application is designed with a modular structure and uses separate modules for managing users, comments, and quiz questions.
+
+***Features***
+User management: view users, create new users, update user information, and delete users.
+Comment management: view comments and add new comments.
+
+***Technologies Used***
+Express.js
+Node.js:
+Routing: Defined routes for handling various HTTP requests.
+Data Management: Implemented separate modules for managing users and comments.
+
+***Getting Started***
+Install dependencies: npm install
+Start the server: npm start
+Access the application in your browser at http://localhost:3600
+
+*/
