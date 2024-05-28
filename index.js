@@ -23,8 +23,8 @@ app.set('views', './views');
 
 // Sample questions data
 let questions = [
-    { id: 1, question: 'What is 2+2?', answer: '4' },
-    { id: 2, question: 'What is the capital of France?', answer: 'Paris' }
+    { id: 1, question: 'What continet in Mt. Everest in?', answer: 'Asia' },
+    { id: 2, question: 'What is the term of US President (in years)?', answer: '4' }
 ];
 
 // Routes
